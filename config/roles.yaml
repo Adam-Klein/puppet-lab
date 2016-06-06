@@ -1,0 +1,48 @@
+---
+roles:
+  pe-puppet-master:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    providers:
+      - type: virtualbox
+        linked_clone: true
+        customize:
+          - [modifyvm, !ruby/sym id, '--memory', 2048]
+    provisioners:
+      - {type: hosts, sync_hosts: true}
+      - {type: shell, inline: 'sh /vagrant/ext/proxy.sh'}
+      - {type: pe_bootstrap, role: !ruby/sym master}
+      - {type: shell, inline: '/usr/local/bin/puppet apply /vagrant/ext/default.pp --modulepath /vagrant/modules'}
+      - {type: shell, inline: '/bin/systemctl restart pe-puppetserver'}
+      - {type: shell, inline: 'sleep 10 && /usr/local/bin/puppet agent -t'}
+
+  pe-puppet-agent:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    providers:
+      - type: virtualbox
+        linked_clone: true
+        customize:
+          - [modifyvm, !ruby/sym id, '--memory', 2048]
+    provisioners:
+      - {type: hosts, sync_hosts: true}
+      - {type: shell, inline: 'sh /vagrant/ext/proxy.sh'}
+      - {type: pe_agent, master: master}
+
+  pe-windows-agent:
+    guest: windows
+    communicator: winrm
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    forwarded_ports:
+      - {guest: '3389', host: '3377', id: 'rdp', auto_correct: 'false' }
+      - {guest: '5985', host: '55885', id: 'winrm', auto_correct: 'true' }
+    providers:
+      - type: virtualbox
+        linked_clone: true
+        customize:
+          - [modifyvm, !ruby/sym id, '--memory', 2048]
+    provisioners:
+      - {type: hosts, sync_hosts: true}
+      - {type: pe_agent, master: master}
+      - {type: shell, path: ext/EnableRDP.ps1, powershell_elevated_interactive: true }

@@ -1,0 +1,14 @@
+---
+vms:
+- name: master
+  box: slalompdx/centos-7
+  roles:
+  - pe-puppet-master
+- name: pe_agent
+  box: slalompdx/centos-7
+  roles:
+  - pe-puppet-agent
+- name: wagent
+  box: ferventcoder/win2012r2-x64-nocm
+  roles:
+  - pe-windows-agent

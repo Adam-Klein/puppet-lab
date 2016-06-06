@@ -1,0 +1,7 @@
+#!/bin/sh
+
+unset $(git rev-parse --local-env-vars)
+cd /etc/puppetlabs/code/environments/production
+
+git fetch --all
+git reset --hard origin/production
