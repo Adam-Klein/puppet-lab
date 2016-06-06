@@ -13,6 +13,12 @@ mod 'r10k',
 mod 'hiera',
   :git => 'https://github.com/voxpupuli/puppet-hiera.git',
   :ref => '2.0.1'
+mod 'stdlib',
+  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git',
+  :ref => '4.12.0'
+mod 'concat',
+  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git',
+  :ref => '2.1.0'
 
 ## *nix modules
 ## ==================================
