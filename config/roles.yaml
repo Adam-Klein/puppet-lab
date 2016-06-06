@@ -7,7 +7,7 @@ roles:
       - type: virtualbox
         linked_clone: true
         customize:
-          - [modifyvm, !ruby/sym id, '--memory', 2048]
+          - [modifyvm, !ruby/sym id, '--memory', 4068 ]
     provisioners:
       - {type: hosts, sync_hosts: true}
       - {type: shell, inline: 'sh /vagrant/ext/proxy.sh'}
@@ -23,7 +23,7 @@ roles:
       - type: virtualbox
         linked_clone: true
         customize:
-          - [modifyvm, !ruby/sym id, '--memory', 2048]
+          - [modifyvm, !ruby/sym id, '--memory', 1024 ]
     provisioners:
       - {type: hosts, sync_hosts: true}
       - {type: shell, inline: 'sh /vagrant/ext/proxy.sh'}
@@ -43,7 +43,7 @@ roles:
       - type: virtualbox
         linked_clone: true
         customize:
-          - [modifyvm, !ruby/sym id, '--memory', 2048]
+          - [modifyvm, !ruby/sym id, '--memory', 1024 ]
     provisioners:
       - {type: hosts, sync_hosts: true}
       - {type: pe_agent, master: master}
