@@ -7,7 +7,7 @@ if [ $myping == 1 ]; then
 cat >> /etc/bashrc <<EOH
 export http_proxy=http://proxy.standard.com:8080
 export https_proxy=http://proxy.standard.com:8080
-export no_proxy=localhost,127.0.0.1
+export no_proxy=localhost,127.0.0.1,master,pe_agent,wagent
 EOH
 else
   echo "No proxy detected. Moving along..."
