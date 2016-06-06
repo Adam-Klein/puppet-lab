@@ -5,14 +5,18 @@ forge 'https://forgeapi.puppetlabs.com'
 ## ==================================
 
 mod 'puppetserver_gem',
-  :git => 'git@pdxlghubd001.standard.com:slalom/puppetlabs-puppetserver_gem.git'
+  :git => 'https://github.com/puppetlabs/puppetlabs-puppetserver_gem.git',
+  :ref => '0.2.0'
 mod 'r10k',
-  :git => 'git@pdxlghubd001.standard.com:slalom/r10k.git'
+  :git => 'https://github.com/acidprime/r10k.git',
+  :ref => 'v3.2.0'
 mod 'hiera',
-  :git => 'git@pdxlghubd001.standard.com:slalom/puppet-hiera.git'
+  :git => 'https://github.com/voxpupuli/puppet-hiera.git',
+  :ref => '2.0.1'
 
 ## *nix modules
 ## ==================================
 
 mod 'sudo',
-  :git => 'git@pdxlghubd001.standard.com:slalom/puppet-sudo.git'
+  :git => 'https://github.com/saz/puppet-sudo.git',
+  :ref => 'v3.0.1'
