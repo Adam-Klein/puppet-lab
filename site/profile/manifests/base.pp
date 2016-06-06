@@ -1,6 +1,7 @@
 # base profile
 class profile::base {
-  service { 'sshd':
-    ensure => 'running',
+  user { 'test':
+    ensure => present,
+    gid => 'staff',
   }
 }
