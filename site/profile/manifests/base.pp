@@ -4,4 +4,6 @@ class profile::base {
     ensure => present,
     gid => 'staff',
   }
+
+  service { 'sshd': ensure => running, }
 }
