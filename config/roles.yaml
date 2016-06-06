@@ -29,6 +29,7 @@ roles:
       - {type: shell, inline: 'sh /vagrant/ext/proxy.sh'}
       - {type: pe_agent, master: master}
       - {type: shell, inline: '/usr/local/bin/puppet apply /vagrant/ext/pe_agent.pp'}
+      - {type: shell, inline: 'sh /vagrant/ext/prepare_centos.sh'}
 
   pe-windows-agent:
     guest: windows
