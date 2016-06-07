@@ -1,2 +1,2 @@
 ---
-puppet_enterprise::master::puppetserver::jruby_max_requests_per_instance: 2
+message: "This is a hiera data file for the puppet master"
