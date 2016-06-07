@@ -1,5 +1,5 @@
 # Manage groups
-class profile::groups {
+class profile::linux::groups {
   group { 'staff':
     ensure => present,
   }

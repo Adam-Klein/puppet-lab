@@ -1,5 +1,5 @@
 # Manage files
-class profile::files {
+class profile::linux::files {
   file { '/etc/motd':
     ensure => file,
     owner  => 'root',

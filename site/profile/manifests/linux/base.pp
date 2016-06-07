@@ -1,5 +1,5 @@
 # base profile
-class profile::base {
+class profile::linux::base {
   include ::sudo
   include ::sudo::configs
 

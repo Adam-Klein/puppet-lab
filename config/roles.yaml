@@ -12,6 +12,7 @@ roles:
       - {type: hosts, sync_hosts: true}
       - {type: shell, inline: 'sh /vagrant/ext/proxy.sh'}
       - {type: pe_bootstrap, role: !ruby/sym master}
+      - {type: shell, inline: 'sh /vagrant/ext/prepare-master.sh'}
       - {type: shell, inline: '/usr/local/bin/puppet apply /vagrant/ext/default.pp --modulepath /vagrant/modules'}
       - {type: shell, inline: '/bin/systemctl restart pe-puppetserver'}
       - {type: shell, inline: 'sleep 10 && /usr/local/bin/puppet agent -t'}
@@ -47,4 +48,5 @@ roles:
     provisioners:
       - {type: hosts, sync_hosts: true}
       - {type: pe_agent, master: master}
-      - {type: shell, path: ext/EnableRDP.ps1, powershell_elevated_interactive: true }
+      - {type: shell, inline: 'puppet apply C:/vagrant/ext/wagent.pp --modulepath C:/vagrant/modules' }
+

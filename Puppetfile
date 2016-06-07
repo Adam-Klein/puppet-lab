@@ -26,3 +26,10 @@ mod 'concat',
 mod 'sudo',
   :git => 'https://github.com/saz/puppet-sudo.git',
   :ref => 'v3.0.1'
+
+## Windows modules
+## ==================================
+
+mod 'powershell',
+  :git => 'https://github.com/puppetlabs/puppetlabs-powershell.git',
+  :ref => '2.0.1'
