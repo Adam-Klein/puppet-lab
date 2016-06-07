@@ -25,6 +25,8 @@ cd /vagrant
 
 Make a small change, then use git to add and commit the change. Now the master is ready to go! Why is this? There's a post-commit hook in the directory that runs r10k on the master every time a change is committed. This syncs local changes to production on the master.
 
+Now run puppet agent -t and see the master use the code in the /vagrant directory!
+
 Exit the master node. Now let's pull up an agent node. Which node you pull up is going to depend on you're running Linux or Windows exercises:
 
 ```
