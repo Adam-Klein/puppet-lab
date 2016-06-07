@@ -5,10 +5,13 @@
 * virtualbox or vmware
 * vagrant
 * oscar (vagrant plugin install oscar)
+* this repository
+
+Clone this repo, then run the commands:
 
 ```
-cd ext && sh bootstrap.sh
-cd ..
+cd puppet-lab/ext && sh bootstrap.sh
+cd ../../
 vagrant up master
 ```
 
@@ -104,14 +107,15 @@ There are two classes, profile::linux::groups and profile::linux::files. Choose 
 
 1. Snare agent is installed and configured using the classes profile::snare::reg and profile::snare::agent. Read through the code, then properly classify your Windows agent to install and configure snare agent.
 
-2. Let's pretend security decided to change the configuration of snare agent. They've changed the destination to 192.168.137.98. Alter the class to make it so the value can be changed via classification or Hiera.
+2. Let's pretend security decided to change the configuration of snare agent. They've changed the destination to 192.168.137.98. Alter the class to make it so the value can be changed via declaration or Hiera.
 
 
 ### refactor code
 
 Refactor the code for class profile::snare::reg. How could this code be better?
 
-### Please note!
+## Great job!
+
 What three things did you learn from this lab? Share with your teammates tomorrow at stand-up!
 
 
