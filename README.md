@@ -1,6 +1,7 @@
 ### The Puppet Learning Lab
 
 Requirements:
+
 * virtualbox or vmware
 * vagrant
 * oscar (vagrant plugin install oscar)
@@ -36,7 +37,7 @@ Current machine states:
 
 master                    running (virtualbox)
 pe_agent                  not created (virtualbox)
-wagent                    running (virtualbox)
+wagent                    not created (virtualbox)
 ```
 
 vagrant up the pe_agent if you're running Linux exercises. vagrant up wagent for Windows exercises.
