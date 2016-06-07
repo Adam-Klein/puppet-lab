@@ -25,7 +25,11 @@ sudo su -
 cd /vagrant
 ```
 
-Make a small change, then use git to add and commit the change. Now the master is ready to go! Why is this? The /vagrant directory is mounted to the puppet-lab directory. There's a post-commit hook in the directory that runs r10k on the master every time a change is committed. This syncs local changes to production on the master.
+Make a small change, then use git to add and commit the change. Now the master is ready to go! Why is this? The /vagrant directory is mounted to the puppet-lab directory. There's a post-commit hook in the directory that runs r10k on the master every time a change is committed. This syncs local changes to production on the master. Check it out:
+
+```
+ls -al /etc/puppetlabs/code/environments/production
+```
 
 After you have added and committed your changes, run puppet agent -t and see the master use the code in the /vagrant directory!
 
