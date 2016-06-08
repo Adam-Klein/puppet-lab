@@ -1,0 +1,24 @@
+@echo off
+cls
+
+echo Installing Snare 4.2.7...
+.\SnareEnterpriseAgent-Windows-v4.2.7-SUPP-MultiArch.exe /SP- /VERYSILENT /NOCANCEL /NORESTART /CLOSEAPPLICATIONS
+
+reg add "HKLM\Software\InterSect Alliance\AuditService\Config" /v ClientName /t REG_SZ /d <%= $::ipaddress %> /f
+
+regedit /s .\postinstall.reg
+
+move /y "%APPDATA%\Microsoft\Windows\Start Menu\Programs\InterSect Alliance" "%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\InterSect Alliance"
+
+echo Restarting Snare Agent Service...
+
+net stop snare
+
+net start snare
+
+GOTO END
+
+
+:END
+cls
+echo Installation of Snare 4.2.7 is complete! You may now close this window...
