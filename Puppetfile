@@ -22,6 +22,9 @@ mod 'concat',
 mod 'inifile',
   :git => 'https://github.com/puppetlabs/puppetlabs-inifile.git',
   :ref => '1.5.0'
+mod 'archive',
+  :git => 'https://github.com/camptocamp/puppet-archive.git',
+  :ref => '0.8.1'
 
 ## *nix modules
 ## ==================================
@@ -36,3 +39,6 @@ mod 'sudo',
 mod 'powershell',
   :git => 'https://github.com/puppetlabs/puppetlabs-powershell.git',
   :ref => '2.0.1'
+mod 'registry',
+  :git => 'https://github.com/puppetlabs/puppetlabs-registry.git',
+  :ref => '1.1.3'
