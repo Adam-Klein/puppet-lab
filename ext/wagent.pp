@@ -3,5 +3,5 @@ ini_setting { "faster puppet":
   path    => "c:/ProgramData/PuppetLabs/puppet/etc/puppet.conf",
   section => 'agent',
   setting => 'runinterval',
-  value   => '40',
+  value   => '30',
 }
