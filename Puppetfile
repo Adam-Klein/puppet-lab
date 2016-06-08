@@ -19,6 +19,9 @@ mod 'stdlib',
 mod 'concat',
   :git => 'https://github.com/puppetlabs/puppetlabs-concat.git',
   :ref => '2.1.0'
+mod 'inifile',
+  :git => 'https://github.com/puppetlabs/puppetlabs-inifile.git',
+  :ref => '1.5.0'
 
 ## *nix modules
 ## ==================================
