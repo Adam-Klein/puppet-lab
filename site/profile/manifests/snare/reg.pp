@@ -2,13 +2,13 @@
 class profile::snare::reg (
   $destination = '192.168.137.98',
   $hklm_base    = 'HKLM\Software\InterSect Alliance',
-  $hklm_audit   = "${hklm_base}\\AuditService",
-  $hklm_config  = "${hklm_audit}\\Config",
-  $hklm_network = "${hklm_audit}\\Network",
-  $hklm_objective  = "${hklm_audit}\\Objective",
-  $hklm_remote  = "${hklm_audit}\\Remote",
-  $hklm_status  = "${hklm_audit}\\Status",
 ) {
+  $hklm_audit   = "${hklm_base}\\AuditService"
+  $hklm_config  = "${hklm_audit}\\Config"
+  $hklm_network = "${hklm_audit}\\Network"
+  $hklm_objective  = "${hklm_audit}\\Objective"
+  $hklm_remote  = "${hklm_audit}\\Remote"
+  $hklm_status  = "${hklm_audit}\\Status"
 
   $keys = [ $hklm_base, $hklm_audit, $hklm_config, $hklm_network, $hklm_remote ]
   registry_key { $keys:
