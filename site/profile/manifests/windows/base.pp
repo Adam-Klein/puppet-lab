@@ -10,4 +10,12 @@ class profile::windows::base {
   exec { 'enable rdp udp':
     command  => 'Enable-NetFirewallRule -DisplayName "Remote Desktop - User Mode (UDP-In)"',
   }
+
+  ini_setting { 'runinterval':
+    ensure  => present,
+    path    => 'c:/ProgramData/PuppetLabs/puppet/etc/puppet.conf',
+    section => 'agent',
+    setting => 'runinterval',
+    value   => '1800',
+  }
 }
