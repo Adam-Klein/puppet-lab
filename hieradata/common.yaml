@@ -1,9 +1,2 @@
 ---
 message: "This is our common hiera data file"
-sudo::configs:
-  'vagrant':
-    'content': '%vagrant ALL=(ALL) NOPASSWD: ALL'
-    'priority': 01
-  'test':
-    'content': '%test ALL=(ALL) NOPASSWD: ALL'
-    'priority': 02

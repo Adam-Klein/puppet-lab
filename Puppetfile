@@ -22,16 +22,12 @@ mod 'concat',
 mod 'inifile',
   :git => 'https://github.com/puppetlabs/puppetlabs-inifile.git',
   :ref => '1.5.0'
-mod 'archive',
-  :git => 'https://github.com/voxpupuli/puppet-archive.git',
-  :ref => 'v0.5.1'
 
 ## *nix modules
 ## ==================================
 
 mod 'sudo',
   :git => 'https://github.com/saz/puppet-sudo.git',
-  :ref => 'v3.0.1'
 
 ## Windows modules
 ## ==================================

@@ -7,5 +7,5 @@ node 'pe_agent.corp.standard.com' {
 }
 
 node 'wagent' {
-  include role::windows::base
+
 }
