@@ -23,8 +23,8 @@ mod 'inifile',
   :git => 'https://github.com/puppetlabs/puppetlabs-inifile.git',
   :ref => '1.5.0'
 mod 'archive',
-  :git => 'https://github.com/camptocamp/puppet-archive.git',
-  :ref => '0.8.1'
+  :git => 'https://github.com/voxpupuli/puppet-archive.git',
+  :ref => 'v0.5.1'
 
 ## *nix modules
 ## ==================================
