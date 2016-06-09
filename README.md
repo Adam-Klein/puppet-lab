@@ -10,8 +10,7 @@
 Clone this repo, then run the commands:
 
 ```
-cd puppet-lab/ext && sh bootstrap.sh
-cd ../../
+cd puppet-lab && sh ext/bootstrap.sh
 vagrant up master
 ```
 
