@@ -219,22 +219,22 @@ class profile::snare::reg {
   registry_value { "${hklm_remote}\\AccessKeySet":
     ensure => present,
     type   => string,
-    data   => '276a188ea215b8e8ff276294cbde9bf2',
+    data   => '276a188ea215b8e8ff275134ceae9bf2',
   }
   registry_value { "${hklm_remote}\\AccessKeySetSnare1":
     ensure => present,
     type   => string,
-    data   => '3d421f78474b37303d2fd4be9cbf0927',
+    data   => '3d421f72134b37303d2fd4be9ded0927',
   }
   registry_value { "${hklm_remote}\\AccessKeySetSnare2":
     ensure => present,
     type   => string,
-    data   => 'dd9bf01285f25fa60fcf07501f89accd',
+    data   => 'dd1a301285f25fa60fcf07501f89accd',
   }
   registry_value { "${hklm_remote}\\AccessKeySetSnare3":
     ensure => present,
     type   => string,
-    data   => 'e8cca5770f356d9f281e1d92cc693760',
+    data   => 'e8cca5470f346d9f281e1d92cd683760',
   }
   registry_value { "${hklm_remote}\\AllowBasicAuth":
     ensure => present,
