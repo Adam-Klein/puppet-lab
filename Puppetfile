@@ -27,7 +27,7 @@ mod 'inifile',
 ## ==================================
 
 mod 'sudo',
-  :git => 'https://github.com/saz/puppet-sudo.git',
+  :git => 'https://github.com/saz/puppet-sudo.git'
 
 ## Windows modules
 ## ==================================
