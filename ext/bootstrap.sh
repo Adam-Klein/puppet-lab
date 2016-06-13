@@ -6,5 +6,6 @@ cp hooks/post-commit .git/hooks/.
 myname=$(uname)
 
 if [ $myname == "MINGW64_NT-6.1"  ]; then
-  dos2unix ext/*
+  find . -type f \! -path \*/\.git/\* -exec dos2unix {} \;
+  dos2unix .git/hooks/post-commit
 fi
