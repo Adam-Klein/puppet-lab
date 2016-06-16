@@ -2,6 +2,8 @@
 
 ### Requirements:
 
+# A small change by Adam 
+
 * virtualbox or vmware
 * vagrant
 * oscar (vagrant plugin install oscar)
