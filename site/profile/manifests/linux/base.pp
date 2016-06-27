@@ -4,4 +4,10 @@ class profile::linux::base {
     ensure => present,
     gid => 'staff',
   }
+
+ service { 'sshd':
+   ensure => 'running',
+   enable => 'true',
+  }
+
 }
