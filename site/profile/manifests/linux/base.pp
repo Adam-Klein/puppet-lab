@@ -10,4 +10,14 @@ class profile::linux::base {
    enable => 'true',
   }
 
+  class { 'sudo':
+    purge               => false,
+    config_file_replace => false,
+  }
+
+  sudo::conf { 'test':
+    priority => 10,
+    content  => "#test ALL=(ALL) NOPASSWD: ALL",
+  }
+
 }
