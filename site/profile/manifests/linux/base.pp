@@ -5,6 +5,11 @@ class profile::linux::base {
     gid => 'staff',
   }
 
+  user { 'alklein':
+    ensure  => 'present',
+    gid => 'staff',
+  }
+
  service { 'sshd':
    ensure => 'running',
    enable => 'true',

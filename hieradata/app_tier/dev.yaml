@@ -1,2 +1,6 @@
 ---
-  
+
+sudo::conf:
+  'alklein':
+    priority: 10
+    content: "alklein ALL=(ALL) NOPASSWD: ALL"
