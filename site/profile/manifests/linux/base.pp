@@ -20,6 +20,8 @@ class profile::linux::base {
     config_file_replace => false,
   }
 
+  include sudo::configs
+  
   sudo::conf { 'test':
     priority => 10,
     content  => "test ALL=(ALL) NOPASSWD: ALL",

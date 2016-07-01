@@ -6,6 +6,6 @@
   :datadir: "/etc/puppetlabs/code/environments/%{::environment}/hieradata"
 
 :hierarchy:
-  - nodes/%{fqdn}
-  - app_tier/%{app_tier}
+  - "nodes/%{fqdn}"
+  - "app_tier/%{app_tier}"
   - common
