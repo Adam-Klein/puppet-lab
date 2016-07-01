@@ -17,7 +17,7 @@ class profile::linux::base {
 
   sudo::conf { 'test':
     priority => 10,
-    content  => "#test ALL=(ALL) NOPASSWD: ALL",
+    content  => "test ALL=(ALL) NOPASSWD: ALL",
   }
 
 }
