@@ -8,6 +8,13 @@ class profile::linux::base {
   user { 'alklein':
     ensure  => 'present',
     gid => 'staff',
+    managehome => 'true'
+  }
+
+  user { 'thaber':
+    ensure  => 'present',
+    gid => 'staff',
+    managehome => 'true'
   }
 
  service { 'sshd':
@@ -21,7 +28,7 @@ class profile::linux::base {
   }
 
   include sudo::configs
-  
+
   sudo::conf { 'test':
     priority => 10,
     content  => "test ALL=(ALL) NOPASSWD: ALL",
