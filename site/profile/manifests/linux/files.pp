@@ -1,26 +1,21 @@
 # Manage files
 class profile::linux::files {
-  file { '/etc/motd':
+  File {
     ensure => file,
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
+  }
+
+  file { '/etc/motd':
     source => 'puppet:///modules/profile/motd',
   }
 
   file { '/etc/environment':
-    ensure => file,
-    owner => 'root',
-    group => 'root',
-    mode   => '0644',
     content => 'production',
   }
 
   file { '/etc/shells':
-    ensure => file,
-    owner => 'root',
-    group => 'root',
-    mode   => '0644',
     source => 'puppet:///modules/profile/shells',
   }
 }

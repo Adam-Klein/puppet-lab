@@ -1,14 +1,8 @@
 # Manage groups
 class profile::linux::groups {
-  group { 'staff':
-    ensure => present,
-  }
+  $groups=['staff','admin','dev']
 
-  group { 'admin':
-    ensure => present,
-  }
-
-  group { 'dev':
+  group { $groups
     ensure => present,
   }
 }
