@@ -8,5 +8,5 @@
 :hierarchy:
   - "nodes/%{fqdn}"
   - "app_tier/%{app_tier}"
-  - "app_tier/%{app_tier}/%role"
+  - "app_tier/%{app_tier}/%{role}"
   - common
