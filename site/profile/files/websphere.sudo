@@ -1,28 +1,28 @@
 #
 # SIC DEV Middleware
 #
-
 Host_Alias   WASDEVSVRS=wapint2,wccint1
 Host_Alias   KILLJVMSVRS=wapint1,wapint2
 
 User_Alias   GETFILEUSERS=webadmin,gfenske,rsteele,tjones,keppinge,ksaurabh, \
-                     kweinham,rmartin2,cvladic,bstoll,mbagri,lmangano, \
-                     lschloss,ltan,nking2,rfrancis,tbrinson,jisom,mkallapp, \
-                     talexand,nsmith2,khutchin,canders3,madams,s000416, \
-		     cbrehman,sroberge,s000283,apinero,drajagop,agajjeha,mmann, \
-		     s000180,s000210,jlyford,anguyen3,bjain,nmali,hshahane, \
-		     pguduri,ymadduku,amurugav,stv,mvisanak, \
-		     mamirine,pguduri,djones2,jthatche,s001173, \
-         jramasam,kweinham,s001059,cvladic,psinha,s001892,s001175,s001389, \
-		     s001390,s001391,s001393,s001406,tgriffin,s001960,s001932,s001973, \
-         s002020,s001974,s001647
+kweinham,rmartin2,cvladic,bstoll,mbagri,lmangano, \
+lschloss,ltan,nking2,rfrancis,tbrinson,jisom,mkallapp, \
+talexand,nsmith2,khutchin,canders3,madams,s000416, \
+cbrehman,sroberge,s000283,apinero,drajagop,agajjeha,mmann, \
+s000180,s000210,jlyford,anguyen3,bjain,nmali,hshahane, \
+pguduri,ymadduku,amurugav,stv,mvisanak, \
+mamirine,pguduri,djones2,jthatche,s001173, \
+jramasam,kweinham,s001059,cvladic,psinha,s001892,s001175,s001389, \
+s001390,s001391,s001393,s001406,tgriffin,s001960,s001932,s001973, \
+s002020,s001974,s001647
+
 User_Alias   WEBSPHERE=webadmin,gfenske,tjones,jisom,kweinham,rsteele,nking2, \
-              rmartin2,apinero,drajagop,rfrancis,canders3, cvladic,tbrinson,lmangano
+rmartin2,apinero,drajagop,rfrancis,canders3,cvladic,tbrinson,lmangano
 
 Cmnd_Alias   GETFILE=/usr/local/bin/getfile.sh
 Cmnd_Alias   KILLJVM=/apps/local/bin/killjvm.sh
 Cmnd_Alias   BUILDWS=/apps/local/bin/buildws.pl,/apps/local/bin/restart.sh, \
-                     /apps/local/bin/buildws5.pl
+/apps/local/bin/buildws5.pl
 Cmnd_Alias   DEPLOYWS=/apps/local/bin/deployws.pl
 
 GETFILEUSERS   WASDEVSVRS=GETFILE: KILLJVMSVRS=KILLJVM
