@@ -1,11 +1,6 @@
 ---
 
 sudo::configs:
-  'alklein':
-    priority: 10
-    content: "alklein ALL=(ALL) NOPASSWD: ALL"
-
-sudo::configs:
   'dev_middleware':
-  priority: 02
-  source: "puppet:///modules/profile/websphere.sudoers"
+    priority: 02
+    source: "puppet:///modules/profile/websphere.sudoers"
