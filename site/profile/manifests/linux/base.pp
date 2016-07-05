@@ -34,4 +34,8 @@ class profile::linux::base {
     content  => "test ALL=(ALL) NOPASSWD: ALL",
   }
 
+  sudo::conf { 'default':
+    priority => 02,
+    source   => 'puppet:///modules/profile/sudoers',
+  }
 }

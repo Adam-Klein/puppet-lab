@@ -1,0 +1,345 @@
+# 
+# bldmgr:/apps/tools/sudo/sudoers
+#
+
+# Host alias specification
+
+Host_Alias   ACCTMGMTSVRS=wapint1,wapint2,iwebdev1,xwebdev3,iwebprod4,iwebprod5, \
+                     mediadev1,mediaprod1,devbuild,datapsd,dataprod,datapsm,scmprod3,scmprod4
+Host_Alias   WASDEVSVRS=wapint2,wccint1
+Host_Alias   KILLJVMSVRS=wapint1,wapint2
+Host_Alias   CCHOSTS=devbuild,pdxlrafwd001,pdxlrafwp001,scmdev3,scmdev4,scmprod3,scmprod4,wasbuild,pdxlbildp001,pdxlbildd001
+Host_Alias   CCVIEWS=scmprod3,scmprod4,devbuild,wasbuild
+Host_Alias   DICESVRS=dicedev
+Host_Alias   PORTALSVRS=xwpint1
+Host_Alias   RELEASEHOSTS=wapmdl2,wapmdl3,wapacc1,wapacc2,wapprod3,wapprod4,wapval1,wapval2
+Host_Alias   BUILDFORGESVRS=pdxlrafwd001,pdxlrafwp001,pdxlbildp001
+Host_Alias   IPR4SERVER=xwebdev3
+
+# Runas alias specification
+Runas_Alias  IPR4USER=webadmin
+
+# User alias specification
+
+User_Alias   ACCTMGMT=akaw,ngoyal,agupta,mmadhusu,asoni,mtandon,dkumar3,adar,schib,ragarwal,rkumar4,sgupta3,mrana,sgupta4,nkumar7,arathaur,asingh3,pagrawal,dbudhira,achaudha,rpandey2,pdongre,abanga,s002066
+User_Alias   CCADMIN=ccadmin
+User_Alias   CCUSERS=eadcook,s001427,s001428,s001932
+User_Alias   DICEWEBSPHERE=webadmin,mhryekew,nsmith2,cvladic,amurugav
+User_Alias   WEBSPHERE=webadmin,gfenske,tjones,jisom,kweinham,rsteele,nking2, \
+                     rmartin2,apinero,drajagop,rfrancis,canders3, \
+                     cvladic,tbrinson,lmangano
+User_Alias   GETFILEUSERS=webadmin,gfenske,rsteele,tjones,keppinge,ksaurabh, \
+                     kweinham,rmartin2,cvladic,bstoll,mbagri,lmangano, \
+                     lschloss,ltan,nking2,rfrancis,tbrinson,jisom,mkallapp, \ 
+                     talexand,nsmith2,khutchin,canders3,madams,s000416, \
+		     cbrehman,sroberge,s000283,apinero,drajagop,agajjeha,mmann, \
+		     s000180,s000210,jlyford,anguyen3,bjain,nmali,hshahane, \
+		     pguduri,ymadduku,amurugav,stv,mvisanak, \
+		     mamirine,pguduri,djones2,jthatche,s001173, \
+                     jramasam,kweinham,s001059,cvladic,psinha,s001892,s001175,s001389, \
+		     s001390,s001391,s001393,s001406,tgriffin,s001960,s001932,s001973,s002020,s001974,s001647
+User_Alias   PORTALUSERS=bstoll,lmangano,nking2,lhryciw, \
+                     kweinham,jlyford,tbrinson,talexand, \
+                     s000180,s000210,s000283, \
+                     ymadduku,mamirine
+User_Alias   RELEASEUSERS=eadcook
+User_Alias   BFMAINT=wicaadm,eadcook
+User_Alias   IPR4USERS=gpoore,amcphers,mfeeny,hshahane,mgillett,dsones,csalnave,bboudet, \
+		     bparrish,cwong2,jmildenb,mvanderz,tpeters2,aangell,jlyford,lhryciw, \
+		     bparting,dsmith7,jreese,jjohns11,jpottsch,idoyle,hjanga 
+User_Alias   BUR_USERS=kkumar2,dperumal
+
+# Cmnd alias specification
+
+Cmnd_Alias   ADDUSER=/apps/local/bin/add_user.sh,/bin/passwd [A-z]*,!/bin/passwd root
+Cmnd_Alias   DELUSER=/usr/sbin/userdel
+Cmnd_Alias   MODUSER=/usr/sbin/usermod
+Cmnd_Alias   GETFILE=/usr/local/bin/getfile.sh
+Cmnd_Alias   BUILDWS=/apps/local/bin/buildws.pl,/apps/local/bin/restart.sh, \
+                     /apps/local/bin/buildws5.pl
+Cmnd_Alias   DEPLOYWS=/apps/local/bin/deployws.pl
+Cmnd_Alias   STARTWEB=/etc/init.d/websphere,/etc/init.d/webserver
+Cmnd_Alias   CLEARCASE=/etc/init.d/clearcase,/opt/rational/clearcase/etc/clearcase 
+Cmnd_Alias   REMVIEWS=/apps/local/bin/ccase_user_rm.sh
+Cmnd_Alias   PORTALGETFILES=/apps/logs/getfile.sh
+Cmnd_Alias   BACKUPCWD=/apps/extra/build/cwd/backup_cwd.sh
+Cmnd_Alias   RESTORECWD=/apps/extra/build/cwd/restore_cwd.sh
+Cmnd_Alias   BACKUPEBCASELOAD=/apps/extra/build/ebcaseload/backup_ebcaseload.sh
+Cmnd_Alias   RESTOREEBCASELOAD=/apps/extra/build/ebcaseload/restore_ebcaseload.sh
+Cmnd_Alias   BACKUPENE=/apps/extra/build/ene/backup_ene.sh
+Cmnd_Alias   RESTOREENE=/apps/extra/build/ene/restore_ene.sh
+Cmnd_Alias   BACKUPEPS=/apps/extra/build/eps/backup_eps.sh
+Cmnd_Alias   RESTOREEPS=/apps/extra/build/eps/restore_eps.sh
+Cmnd_Alias   BACKUPGEL=/apps/extra/build/gel/backup_gel.sh
+Cmnd_Alias   RESTOREGEL=/apps/extra/build/gel/restore_gel.sh
+Cmnd_Alias   BACKUPGIB=/apps/extra/build/gib/backup_gib.sh
+Cmnd_Alias   RESTOREGIB=/apps/extra/build/gib/restore_gib.sh
+Cmnd_Alias   BACKUPPPI=/apps/extra/build/ppi/backup_ppi.sh
+Cmnd_Alias   RESTOREPPI=/apps/extra/build/ppi/restore_ppi.sh
+Cmnd_Alias   BACKUPPRESS=/apps/extra/build/press/backup_press.sh
+Cmnd_Alias   RESTOREPRESS=/apps/extra/build/press/restore_press.sh
+Cmnd_Alias   BACKUPPRESSREG=/apps/extra/build/pressregister/backup_pressregister.sh
+Cmnd_Alias   RESTOREPRESSREG=/apps/extra/build/pressregister/restore_pressregister.sh
+Cmnd_Alias   BACKUPPRO=/apps/extra/build/pro/backup_pro.sh
+Cmnd_Alias   RESTOREPRO=/apps/extra/build/pro/restore_pro.sh
+Cmnd_Alias   BACKUPRPA=/apps/extra/build/rpa/backup_rpa.sh
+Cmnd_Alias   RESTORERPA=/apps/extra/build/rpa/restore_rpa.sh
+Cmnd_Alias   BACKUPSFGEMP=/apps/extra/build/sfgemployee/backup_sfgemployee.sh
+Cmnd_Alias   RESTORESFGEMP=/apps/extra/build/sfgemployee/restore_sfgemployee.sh
+Cmnd_Alias   BACKUPSMILE=/apps/extra/build/smile/backup_smile.sh
+Cmnd_Alias   RESTORESMILE=/apps/extra/build/smile/restore_smile.sh
+Cmnd_Alias   BACKUPSFGSEL=/apps/extra/build/standardselect/backup_standardselect.sh
+Cmnd_Alias   RESTORESFGSEL=/apps/extra/build/standardselect/restore_standardselect.sh
+Cmnd_Alias   BACKUPTADMIN=/apps/extra/build/tivoliadmin/backup_tivoliadmin.sh
+Cmnd_Alias   RESTORETADMIN=/apps/extra/build/tivoliadmin/restore_tivoliadmin.sh
+Cmnd_Alias   BACKUPPDM=/apps/extra/build/pdm/backup_pdm.sh
+Cmnd_Alias   RESTOREPDM=/apps/extra/build/pdm/restore_pdm.sh
+Cmnd_Alias   BUILDFORGE=/etc/init.d/buildforge
+Cmnd_Alias   KILLJVM=/apps/local/bin/killjvm.sh 
+Cmnd_Alias   IPR4=/internet/scripts/ipr4.pl
+Cmnd_Alias   BUR_COMMAND=/opt/tivoli/tsm/client/ba/bin/dsmc,     \
+			 /opt/tivoli/tsm/client/ba/bin/dsmcad,   \
+			 /opt/tivoli/tsm/client/ba/bin/dsmtrace, \
+                         /opt/tivoli/tsm/client/ba/bin/dsmadmc,  \
+                         /usr/tivoli/tsm/client/ba/bin/dsmc,     \
+                         /usr/tivoli/tsm/client/ba/bin/dsmcad,   \
+                         /usr/tivoli/tsm/client/ba/bin/dsmtrace, \
+                         /usr/tivoli/tsm/client/ba/bin/dsmadmc,  \
+                         /usr/bin/uncompress, \ 
+                         /usr/bin/dsmadmc, \ 
+                         /usr/bin/dsmc *, \
+                         /usr/bin/dsmtca, \
+                         /usr/bin/nohup dsmc sched, \ 
+                         /usr/bin/nohup dsmc, \ 
+                         /usr/bin/nohup dsmc inc, \ 
+                         /usr/bin/nohup dsmc restore, \
+                         /usr/sbin/lsdev -Cc adapter, \ 
+                         /usr/sbin/lsdev -Cc tape, \
+                         /usr/bin/ls, \
+                         /usr/bin/topas, \
+                         /usr/bin/mail -s*
+Cmnd_Alias   BUR_FILEEDIT=/usr/local/bin/sudoedit /usr/bin/dsm.opt, \
+                         /usr/local/bin/sudoedit /usr/bin/dsm.sys, \
+                         /usr/local/bin/sudoedit /usr/tivoli/tsm/client/ba/bin/dsm.opt, \
+                         /usr/local/bin/sudoedit /opt/tivoli/tsm/client/ba/bin/dsm.sys
+# User privilege specification
+root    ALL=(ALL) ALL
+ACCTMGMT       ACCTMGMTSVRS=NOPASSWD:ADDUSER, NOPASSWD:DELUSER, NOPASSWD:MODUSER
+GETFILEUSERS   WASDEVSVRS=GETFILE: \
+	       KILLJVMSVRS=KILLJVM
+WEBSPHERE      WASDEVSVRS=BUILDWS, DEPLOYWS
+DICEWEBSPHERE  DICESVRS=BUILDWS, STARTWEB, GETFILE
+CCUSERS        CCHOSTS=CLEARCASE
+CCADMIN        CCVIEWS=REMVIEWS
+PORTALUSERS    PORTALSVRS=PORTALGETFILES
+RELEASEUSERS   RELEASEHOSTS=BACKUPCWD, RESTORECWD, BACKUPEBCASELOAD, RESTOREEBCASELOAD, BACKUPENE, RESTOREENE, \
+               BACKUPEPS, RESTOREEPS, BACKUPGEL, RESTOREGEL, BACKUPGIB, RESTOREGIB, BACKUPPPI, RESTOREPPI, \
+               BACKUPPRESS, RESTOREPRESS, BACKUPPRESSREG, RESTOREPRESSREG, BACKUPPRO, RESTOREPRO, \
+               BACKUPRPA, RESTORERPA, BACKUPSFGEMP, RESTORESFGEMP, BACKUPSMILE, RESTORESMILE, \
+               BACKUPSFGSEL, RESTORESFGSEL, BACKUPTADMIN, RESTORETADMIN, BACKUPPDM, RESTOREPDM
+BFMAINT        BUILDFORGESVRS=BUILDFORGE
+IPR4USERS      IPR4SERVER= (IPR4USER) IPR4
+BUR_USERS      ALL=BUR_COMMAND, NOEXEC: BUR_FILEEDIT
+#
+# ETL (DataStage) non-prod hosts
+#
+Host_Alias   ETLNONSVRS=etldev1,etlsys1
+
+User_Alias   ETLNONUSERS=dsadm
+
+Cmnd_Alias   ETLSTOP=/apps/IBM/InformationServer/Server/DSEngine/bin/uv -admin -stop
+Cmnd_Alias   ETLSTART=/apps/IBM/InformationServer/Server/DSEngine/bin/uv -admin -start
+Cmnd_Alias   ETLREGEN=/apps/IBM/InformationServer/Server/DSEngine/bin/uv -admin -regen
+Cmnd_Alias   ETLWASSTOP=/apps/IBM/WebSphere/AppServer/profiles/InfoSphere/bin/stopServer.sh server1
+Cmnd_Alias   ETLWASSTART=/apps/IBM/WebSphere/AppServer/profiles/InfoSphere/bin/startServer.sh server1
+Cmnd_Alias   ETLNODESTOP=/apps/IBM/InformationServer/ASBNode/bin/NodeAgents.sh stop
+Cmnd_Alias   ETLNODESTART=/apps/IBM/InformationServer/ASBNode/bin/NodeAgents.sh start
+Cmnd_Alias   ETLMETASTOP=/apps/IBM/InformationServer/ASBServer/bin/MetadataServer.sh stop
+Cmnd_Alias   ETLMETASTART=/apps/IBM/InformationServer/ASBServer/bin/MetadataServer.sh start
+Cmnd_Alias   ETLINSTUPDATES=/apps/IBM/InformationServer/Updates/bin/installUpdates
+
+ETLNONUSERS    ETLNONSVRS=ETLSTART,ETLSTOP,ETLREGEN,ETLWASSTOP,ETLWASSTART,ETLNODESTOP,ETLNODESTART, \
+               ETLMETASTOP,ETLMETASTART,ETLINSTUPDATES
+
+#
+# Host ADMSVR4
+#
+Host_Alias	NASADMIN=admsvr4
+
+User_Alias	EOC=mmickane
+
+Cmnd_Alias	QUOTAUP=/apps/local/bin/quota_update,/apps/local/bin/sfguser_cleanup.sh,/apps/local/bin/quota_initialize
+
+EOC     NASADMIN=QUOTAUP
+
+#
+# Host PDXLRHSSP001 (RHN specifics) 
+#
+Cmnd_Alias CONFIG_RHN = /usr/sbin/rhn-sat-restart-silent,\
+                        /usr/bin/rhn-config-satellite.pl,\
+                        /usr/bin/rhn-satellite-activate,\
+                        /usr/bin/rhn-bootstrap,\
+                        /usr/bin/rhn-load-ssl-cert.pl,\
+                        /usr/bin/rhn-ssl-tool,\
+                        /etc/rc.d/np.d/step Monitoring install,\
+                        /etc/rc.d/np.d/step MonitoringScout install,\
+                        /etc/rc.d/np.d/step Monitoring uninstall,\
+                        /etc/rc.d/np.d/step MonitoringScout uninstall,\
+                        /sbin/service Monitoring restart,\
+                        /sbin/service MonitoringScout restart,\
+                        /sbin/service taskomatic restart
+
+# The CONFIG_RHN commands are required for reconfiguration of a
+# running RHN Satellite.  They should be enabled for proper operation
+# of the RHN Satellite.
+apache  ALL=(root)      NOPASSWD: CONFIG_RHN
+tomcat  ALL=(root)      NOPASSWD: CONFIG_RHN
+
+#
+# Host DBPROD1 (ITM) and DBDEV1
+#
+Host_Alias	ITMHOSTS=dbprod1
+Host_Alias	MOUNT_HOSTS=dbprod1,dbdev1
+
+User_Alias	ITMADMIN=oracle
+User_Alias	MOUNT_USER=oracle
+
+Cmnd_Alias	MOUNT=/usr/sbin/mount,/usr/sbin/umount
+
+Cmnd_Alias	ITMORCFG=/opt/IBM/ITM/bin/itmcmd config -A or
+Cmnd_Alias	ITMORAGTSTOP=/opt/IBM/ITM/bin/itmcmd agent -o wpsxcp stop or
+Cmnd_Alias	ITMORAGTSTART=/opt/IBM/ITM/bin/itmcmd agent -o wpsxcp start or
+Cmnd_Alias	ITMORAGTMSTOP=/opt/IBM/ITM/bin/itmcmd agent -o wpsxmp stop or
+Cmnd_Alias	ITMORAGTMSTART=/opt/IBM/ITM/bin/itmcmd agent -o wpsxmp start or
+
+ITMADMIN	ITMHOSTS=ITMORCFG, ITMORAGTSTOP, ITMORAGTSTART, ITMORAGTMSTOP, ITMORAGTMSTART
+MOUNT_USER	MOUNT_HOSTS=MOUNT
+
+#
+# Host EAIPRE1 (WICS)
+#
+Host_Alias	EAISVRS=eaipre1
+
+User_Alias	EAIADMIN=webadmin,jisom
+
+Cmnd_Alias	EAIWEBCYCLE=/apps/websphere/appserver/bin/startServer.sh, \
+			/apps/websphere/appserver/bin/stopServer.sh
+
+EAIADMIN	EAISVRS=EAIWEBCYCLE
+
+#
+# Host STDFEEDACC and STDFEEDPROD (ProFTP)
+#
+Host_Alias	FTPFEEDSVRS=stdfeedacc,stdfeedprod
+
+User_Alias	FTPADMIN=webadmin,eadcook, \
+			akaw,ngoyal,agupta,rkumar4,sgupta3,mrana,sgupta4,nkumar7,arathaur,s002066
+
+Cmnd_Alias	ADDFTPUSER=/apps/proftpd/sbin/ftpadmin
+Cmnd_Alias	FTPINIT=/etc/init.d/proftpd
+
+FTPADMIN	FTPFEEDSVRS=ADDFTPUSER, FTPINIT
+
+#
+# Host PRTSVR3 and PRTSVR4 
+#
+Host_Alias	PRTSVRS=prtsvr3,prtsvr4
+
+User_Alias	NETOPS=mmickane
+User_Alias	PRINTMON=webadmin
+
+Cmnd_Alias	LPCMDS=/usr/sbin/lpadmin,/usr/bin/cancel,\
+			/usr/bin/enable,/usr/bin/disable,/usr/sbin/lpmove,\
+			/usr/sbin/reject,/usr/sbin/accept
+Cmnd_Alias	PRINTMON_CMDS=/usr/bin/cancel
+
+NETOPS		PRTSVRS=NOPASSWD: LPCMDS
+PRINTMON	PRTSVRS=NOPASSWD: PRINTMON_CMDS
+
+#
+# Host WMBACC and WMBPROD (Message Broker) 
+#
+Host_Alias	WMB_CLUSTER_NODE=wmbacc1,wmbacc2,wmbprod1,wmbprod2
+
+User_Alias	CLUSTER_ADMIN=wbrkadm
+
+Cmnd_Alias	CLUSTER_CMDS=/usr/cluster/bin/clrs enable wmbprod-cmg1, /usr/cluster/bin/clrs disable wmbprod-cmg1, /usr/cluster/bin/clrs enable wmbacc-cmg1, /usr/cluster/bin/clrs disable wmbacc-cmg1
+
+CLUSTER_ADMIN	WMB_CLUSTER_NODE=NOPASSWD: CLUSTER_CMDS
+
+#
+# Host SASSVR1 and SASTEST1 (SAS Enterprise Miner Server) 
+#
+Host_Alias	SASSERVER=sassvr1,sastest1
+
+User_Alias	SAS_ADMIN=sasadmin,droe,apinero
+
+Cmnd_Alias	SASSERVER_CMDS=/usr/local/bin/mkdir_sasuser.sh,/usr/local/bin/check-saswork,/usr/local/bin/clean-saswork,/usr/bin/du
+
+SAS_ADMIN	SASSERVER=NOPASSWD: SASSERVER_CMDS
+
+#
+# Networker Clients
+#
+User_Alias	IBM_BUR_USERS=kkumar2,dperumal
+
+Cmnd_Alias	IBM_BUR_CMNDS=/etc/init.d/networker, \
+				    /etc/rc.nsr, \
+				    /usr/bin/nsr_shutdown, \
+				    /usr/sbin/nsr_shutdown, \
+				    /usr/bin/recover, \
+				    /usr/sbin/recover, \
+				    /usr/bin/save, \
+				    /usr/sbin/save
+
+IBM_BUR_USERS	ALL=IBM_BUR_CMNDS
+
+#
+# Tivoli Netcool sudoers file
+#
+# Specify hosts commands apply to
+Host_Alias      NETCOOL_SERVER=pdxlitamp002,pdxlitamp003
+User_Alias      IBM_NETCOOL_USERS=jtobin
+#  The following Applications are covered in this list:
+#       Tivoli Netcool OMNIbus
+#       Tivoli Netcool Impact
+#       Tivoli Netcool Webtop/OMNIbus GUI
+#       Tivoli Network Manager
+#       Tivoli Business Systems Manager
+
+Cmnd_Alias NETCOOL_INFRA_CMDS = \
+                /opt/IBM/tivoli/netcool/omnibus/bin/nco_pad, \
+                /opt/IBM/tivoli/netcool/omnibus/probes/linux*/nco_p_mttrapd, \
+                /opt/IBM/tivoli/netcool/omnibus/probes, \
+                /opt/IBM/tivoli/netcool/omnibus/probes/linux*/, \
+                /opt/IBM/tivoli/netcool/omnibus/probes, \
+                /opt/IBM/tivoli/netcool/omnibus/platform/linux*/bin/, \
+                /opt/IBM/tivoli/netcool/precision/bin/, \
+                /opt/IBM/tivoli/netcool/precision/scripts/, \
+                /opt/IBM/tivoli/netcool/precision/scripts/perl/scripts/, \
+                /opt/IBM/tivoli/netcool/precision/scripts/webtools/bin/, \
+                /opt/IBM/tivoli/netcool/precision/platform/linux*/bin/, \
+                /etc/init.d/nco, \
+                /bin/su - ncosys, \
+                /usr/bin/passwd -u ncosys, \
+                /etc/rc.d/rc5.d/S90ncp
+IBM_NETCOOL_USERS	NETCOOL_SERVER=NETCOOL_INFRA_CMDS                
+#
+# Ruby On Rails su to service account commands, httpd start/restart/status/stop
+#
+Host_Alias   RORNPHOSTS=pdxlrord001,pdxlrord002,pdxlrors001,pdxlrors002,pdxlrors003,pdxlrora001,pdxlrora002
+Host_Alias   RORPHOSTS=pdxlrorp001,pdxlrorp002,pdxlrorp003
+#
+User_Alias   ROR_USERS=tjones,s000176
+#
+Cmnd_Alias   RORNPSVCSU=/bin/su - svcebanp
+Cmnd_Alias   RORPSVCSU=/bin/su - svcebap
+Cmnd_Alias   RORHTTPD=/etc/init.d/httpd
+#
+ROR_USERS       RORNPHOSTS=RORNPSVCSU,RORHTTPD:RORPHOSTS=RORPSVCSU,RORHTTPD
+#
+# The following line must be after the last 'additive' line in this file 
+# only negations should follow this: 
+# 
+Cmnd_Alias SUDOSUDO = /usr/local/bin/sudo, /usr/bin/sudo, /bin/sudo
+ALL ALL=!SUDOSUDO
