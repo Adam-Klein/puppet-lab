@@ -4,9 +4,7 @@
 Host_Alias   WASDEVSVRS=wapint2,wccint1
 Host_Alias   KILLJVMSVRS=wapint1,wapint2
 
-User_Alias   GETFILEUSERS=webadmin,gfenske,rsteele,tjones,keppinge,ksaurabh, \
-kweinham,rmartin2,cvladic,bstoll,mbagri,lmangano, \
-lschloss,ltan,nking2,rfrancis,tbrinson,jisom,mkallapp, \
+User_Alias   GETFILEUSERS=webadmin,gfenske,rsteele,tjones,keppinge,ksaurabh,kweinham,rmartin2,cvladic,bstoll,mbagri,lmangano,lschloss,ltan,nking2,rfrancis,tbrinson,jisom,mkallapp, \
 talexand,nsmith2,khutchin,canders3,madams,s000416, \
 cbrehman,sroberge,s000283,apinero,drajagop,agajjeha,mmann, \
 s000180,s000210,jlyford,anguyen3,bjain,nmali,hshahane, \
