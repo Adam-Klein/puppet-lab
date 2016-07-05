@@ -2,7 +2,7 @@
 class profile::linux::groups {
   $groups=['staff','admin','dev']
 
-  group { $groups
+  group { $groups:
     ensure => present,
   }
 }
