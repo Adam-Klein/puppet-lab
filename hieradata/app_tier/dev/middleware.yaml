@@ -8,4 +8,4 @@ sudo::configs:
 sudo::configs:
   'dev_middleware':
   priority: 02
-  source: "puppet:///modules/profile/webspher.sudoers"
+  source: "puppet:///modules/profile/websphere.sudoers"
