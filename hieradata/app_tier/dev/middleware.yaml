@@ -1,0 +1,11 @@
+---
+
+sudo::configs:
+  'alklein':
+    priority: 10
+    content: "alklein ALL=(ALL) NOPASSWD: ALL"
+
+sudo::conf { 'dev_middleware':
+  priority => 02,
+  source   => 'puppet:///modules/profile/webspher.sudoers',
+}
