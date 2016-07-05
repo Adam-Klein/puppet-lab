@@ -1,4 +1,4 @@
-# 
+#
 # bldmgr:/apps/tools/sudo/sudoers
 #
 
@@ -7,7 +7,6 @@
 Host_Alias   ACCTMGMTSVRS=wapint1,wapint2,iwebdev1,xwebdev3,iwebprod4,iwebprod5, \
                      mediadev1,mediaprod1,devbuild,datapsd,dataprod,datapsm,scmprod3,scmprod4
 Host_Alias   WASDEVSVRS=wapint2,wccint1
-Host_Alias   KILLJVMSVRS=wapint1,wapint2
 Host_Alias   CCHOSTS=devbuild,pdxlrafwd001,pdxlrafwp001,scmdev3,scmdev4,scmprod3,scmprod4,wasbuild,pdxlbildp001,pdxlbildd001
 Host_Alias   CCVIEWS=scmprod3,scmprod4,devbuild,wasbuild
 Host_Alias   DICESVRS=dicedev
@@ -28,16 +27,6 @@ User_Alias   DICEWEBSPHERE=webadmin,mhryekew,nsmith2,cvladic,amurugav
 User_Alias   WEBSPHERE=webadmin,gfenske,tjones,jisom,kweinham,rsteele,nking2, \
                      rmartin2,apinero,drajagop,rfrancis,canders3, \
                      cvladic,tbrinson,lmangano
-User_Alias   GETFILEUSERS=webadmin,gfenske,rsteele,tjones,keppinge,ksaurabh, \
-                     kweinham,rmartin2,cvladic,bstoll,mbagri,lmangano, \
-                     lschloss,ltan,nking2,rfrancis,tbrinson,jisom,mkallapp, \ 
-                     talexand,nsmith2,khutchin,canders3,madams,s000416, \
-		     cbrehman,sroberge,s000283,apinero,drajagop,agajjeha,mmann, \
-		     s000180,s000210,jlyford,anguyen3,bjain,nmali,hshahane, \
-		     pguduri,ymadduku,amurugav,stv,mvisanak, \
-		     mamirine,pguduri,djones2,jthatche,s001173, \
-                     jramasam,kweinham,s001059,cvladic,psinha,s001892,s001175,s001389, \
-		     s001390,s001391,s001393,s001406,tgriffin,s001960,s001932,s001973,s002020,s001974,s001647
 User_Alias   PORTALUSERS=bstoll,lmangano,nking2,lhryciw, \
                      kweinham,jlyford,tbrinson,talexand, \
                      s000180,s000210,s000283, \
@@ -46,7 +35,7 @@ User_Alias   RELEASEUSERS=eadcook
 User_Alias   BFMAINT=wicaadm,eadcook
 User_Alias   IPR4USERS=gpoore,amcphers,mfeeny,hshahane,mgillett,dsones,csalnave,bboudet, \
 		     bparrish,cwong2,jmildenb,mvanderz,tpeters2,aangell,jlyford,lhryciw, \
-		     bparting,dsmith7,jreese,jjohns11,jpottsch,idoyle,hjanga 
+		     bparting,dsmith7,jreese,jjohns11,jpottsch,idoyle,hjanga
 User_Alias   BUR_USERS=kkumar2,dperumal
 
 # Cmnd alias specification
@@ -54,12 +43,8 @@ User_Alias   BUR_USERS=kkumar2,dperumal
 Cmnd_Alias   ADDUSER=/apps/local/bin/add_user.sh,/bin/passwd [A-z]*,!/bin/passwd root
 Cmnd_Alias   DELUSER=/usr/sbin/userdel
 Cmnd_Alias   MODUSER=/usr/sbin/usermod
-Cmnd_Alias   GETFILE=/usr/local/bin/getfile.sh
-Cmnd_Alias   BUILDWS=/apps/local/bin/buildws.pl,/apps/local/bin/restart.sh, \
-                     /apps/local/bin/buildws5.pl
-Cmnd_Alias   DEPLOYWS=/apps/local/bin/deployws.pl
 Cmnd_Alias   STARTWEB=/etc/init.d/websphere,/etc/init.d/webserver
-Cmnd_Alias   CLEARCASE=/etc/init.d/clearcase,/opt/rational/clearcase/etc/clearcase 
+Cmnd_Alias   CLEARCASE=/etc/init.d/clearcase,/opt/rational/clearcase/etc/clearcase
 Cmnd_Alias   REMVIEWS=/apps/local/bin/ccase_user_rm.sh
 Cmnd_Alias   PORTALGETFILES=/apps/logs/getfile.sh
 Cmnd_Alias   BACKUPCWD=/apps/extra/build/cwd/backup_cwd.sh
@@ -95,7 +80,6 @@ Cmnd_Alias   RESTORETADMIN=/apps/extra/build/tivoliadmin/restore_tivoliadmin.sh
 Cmnd_Alias   BACKUPPDM=/apps/extra/build/pdm/backup_pdm.sh
 Cmnd_Alias   RESTOREPDM=/apps/extra/build/pdm/restore_pdm.sh
 Cmnd_Alias   BUILDFORGE=/etc/init.d/buildforge
-Cmnd_Alias   KILLJVM=/apps/local/bin/killjvm.sh 
 Cmnd_Alias   IPR4=/internet/scripts/ipr4.pl
 Cmnd_Alias   BUR_COMMAND=/opt/tivoli/tsm/client/ba/bin/dsmc,     \
 			 /opt/tivoli/tsm/client/ba/bin/dsmcad,   \
@@ -105,15 +89,15 @@ Cmnd_Alias   BUR_COMMAND=/opt/tivoli/tsm/client/ba/bin/dsmc,     \
                          /usr/tivoli/tsm/client/ba/bin/dsmcad,   \
                          /usr/tivoli/tsm/client/ba/bin/dsmtrace, \
                          /usr/tivoli/tsm/client/ba/bin/dsmadmc,  \
-                         /usr/bin/uncompress, \ 
-                         /usr/bin/dsmadmc, \ 
+                         /usr/bin/uncompress, \
+                         /usr/bin/dsmadmc, \
                          /usr/bin/dsmc *, \
                          /usr/bin/dsmtca, \
-                         /usr/bin/nohup dsmc sched, \ 
-                         /usr/bin/nohup dsmc, \ 
-                         /usr/bin/nohup dsmc inc, \ 
+                         /usr/bin/nohup dsmc sched, \
+                         /usr/bin/nohup dsmc, \
+                         /usr/bin/nohup dsmc inc, \
                          /usr/bin/nohup dsmc restore, \
-                         /usr/sbin/lsdev -Cc adapter, \ 
+                         /usr/sbin/lsdev -Cc adapter, \
                          /usr/sbin/lsdev -Cc tape, \
                          /usr/bin/ls, \
                          /usr/bin/topas, \
@@ -125,9 +109,6 @@ Cmnd_Alias   BUR_FILEEDIT=/usr/local/bin/sudoedit /usr/bin/dsm.opt, \
 # User privilege specification
 root    ALL=(ALL) ALL
 ACCTMGMT       ACCTMGMTSVRS=NOPASSWD:ADDUSER, NOPASSWD:DELUSER, NOPASSWD:MODUSER
-GETFILEUSERS   WASDEVSVRS=GETFILE: \
-	       KILLJVMSVRS=KILLJVM
-WEBSPHERE      WASDEVSVRS=BUILDWS, DEPLOYWS
 DICEWEBSPHERE  DICESVRS=BUILDWS, STARTWEB, GETFILE
 CCUSERS        CCHOSTS=CLEARCASE
 CCADMIN        CCVIEWS=REMVIEWS
@@ -173,7 +154,7 @@ Cmnd_Alias	QUOTAUP=/apps/local/bin/quota_update,/apps/local/bin/sfguser_cleanup.
 EOC     NASADMIN=QUOTAUP
 
 #
-# Host PDXLRHSSP001 (RHN specifics) 
+# Host PDXLRHSSP001 (RHN specifics)
 #
 Cmnd_Alias CONFIG_RHN = /usr/sbin/rhn-sat-restart-silent,\
                         /usr/bin/rhn-config-satellite.pl,\
@@ -241,7 +222,7 @@ Cmnd_Alias	FTPINIT=/etc/init.d/proftpd
 FTPADMIN	FTPFEEDSVRS=ADDFTPUSER, FTPINIT
 
 #
-# Host PRTSVR3 and PRTSVR4 
+# Host PRTSVR3 and PRTSVR4
 #
 Host_Alias	PRTSVRS=prtsvr3,prtsvr4
 
@@ -257,7 +238,7 @@ NETOPS		PRTSVRS=NOPASSWD: LPCMDS
 PRINTMON	PRTSVRS=NOPASSWD: PRINTMON_CMDS
 
 #
-# Host WMBACC and WMBPROD (Message Broker) 
+# Host WMBACC and WMBPROD (Message Broker)
 #
 Host_Alias	WMB_CLUSTER_NODE=wmbacc1,wmbacc2,wmbprod1,wmbprod2
 
@@ -268,7 +249,7 @@ Cmnd_Alias	CLUSTER_CMDS=/usr/cluster/bin/clrs enable wmbprod-cmg1, /usr/cluster/
 CLUSTER_ADMIN	WMB_CLUSTER_NODE=NOPASSWD: CLUSTER_CMDS
 
 #
-# Host SASSVR1 and SASTEST1 (SAS Enterprise Miner Server) 
+# Host SASSVR1 and SASTEST1 (SAS Enterprise Miner Server)
 #
 Host_Alias	SASSERVER=sassvr1,sastest1
 
@@ -323,7 +304,7 @@ Cmnd_Alias NETCOOL_INFRA_CMDS = \
                 /bin/su - ncosys, \
                 /usr/bin/passwd -u ncosys, \
                 /etc/rc.d/rc5.d/S90ncp
-IBM_NETCOOL_USERS	NETCOOL_SERVER=NETCOOL_INFRA_CMDS                
+IBM_NETCOOL_USERS	NETCOOL_SERVER=NETCOOL_INFRA_CMDS
 #
 # Ruby On Rails su to service account commands, httpd start/restart/status/stop
 #
@@ -338,8 +319,8 @@ Cmnd_Alias   RORHTTPD=/etc/init.d/httpd
 #
 ROR_USERS       RORNPHOSTS=RORNPSVCSU,RORHTTPD:RORPHOSTS=RORPSVCSU,RORHTTPD
 #
-# The following line must be after the last 'additive' line in this file 
-# only negations should follow this: 
-# 
+# The following line must be after the last 'additive' line in this file
+# only negations should follow this:
+#
 Cmnd_Alias SUDOSUDO = /usr/local/bin/sudo, /usr/bin/sudo, /bin/sudo
 ALL ALL=!SUDOSUDO
