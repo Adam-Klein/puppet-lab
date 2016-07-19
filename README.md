@@ -54,15 +54,24 @@ Open another terminal session and then:
 vagrant up pe_agent
 ```
 
-#### Windows node
-
-```
-vagrant up wagent 
-```
-
 ## Exercise 1
 
+Create a module to
 
+* Ensure Apache httpd installed
+* Ensures document root directory exists to serve web pages
+* Ensure index.html includes data from your module
 
+### Exercise 2
 
+Make a minor change in the apache index.html file
+
+### Exercise 3
+
+* Use puppet to deploy the updated index.html file
+* Ensuring the service restarts when the file is changed
+
+### Extra credit
+
+* TBD
 
