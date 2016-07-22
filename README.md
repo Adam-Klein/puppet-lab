@@ -56,22 +56,20 @@ vagrant up pe_agent
 
 ## Exercise 1
 
-Create a module to
+Create a class to
 
-* Ensure Apache httpd installed
+* Ensure Apache package installed
 * Ensures document root directory exists to serve web pages
-* Ensure index.html includes data from your module
+* Ensure index.html includes data from your class
 
 ### Exercise 2
 
-Make a minor change in the apache index.html file
+Make a minor change in the apache httpd.conf file
 
 ### Exercise 3
 
-* Use puppet to deploy the updated index.html file
-* Ensuring the service restarts when the file is changed
+* Use puppet to deploy the updated httpd.conf file
 
 ### Extra credit
 
 * TBD
-
