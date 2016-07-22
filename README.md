@@ -56,7 +56,7 @@ vagrant up pe_agent
 
 ## Exercise 1
 
-Create a class to
+Create a new language to
 
 * Ensure Apache package installed
 * Ensures document root directory exists to serve web pages
