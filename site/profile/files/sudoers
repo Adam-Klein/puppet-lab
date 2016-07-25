@@ -6,7 +6,6 @@
 
 Host_Alias   ACCTMGMTSVRS=wapint1,wapint2,iwebdev1,xwebdev3,iwebprod4,iwebprod5, \
                      mediadev1,mediaprod1,devbuild,datapsd,dataprod,datapsm,scmprod3,scmprod4
-Host_Alias   WASDEVSVRS=wapint2,wccint1
 Host_Alias   CCHOSTS=devbuild,pdxlrafwd001,pdxlrafwp001,scmdev3,scmdev4,scmprod3,scmprod4,wasbuild,pdxlbildp001,pdxlbildd001
 Host_Alias   CCVIEWS=scmprod3,scmprod4,devbuild,wasbuild
 Host_Alias   DICESVRS=dicedev
@@ -24,9 +23,6 @@ User_Alias   ACCTMGMT=akaw,ngoyal,agupta,mmadhusu,asoni,mtandon,dkumar3,adar,sch
 User_Alias   CCADMIN=ccadmin
 User_Alias   CCUSERS=eadcook,s001427,s001428,s001932
 User_Alias   DICEWEBSPHERE=webadmin,mhryekew,nsmith2,cvladic,amurugav
-User_Alias   WEBSPHERE=webadmin,gfenske,tjones,jisom,kweinham,rsteele,nking2, \
-                     rmartin2,apinero,drajagop,rfrancis,canders3, \
-                     cvladic,tbrinson,lmangano
 User_Alias   PORTALUSERS=bstoll,lmangano,nking2,lhryciw, \
                      kweinham,jlyford,tbrinson,talexand, \
                      s000180,s000210,s000283, \
