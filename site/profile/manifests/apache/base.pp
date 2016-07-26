@@ -2,7 +2,7 @@
 class profile::apache::base {
   $conffile = '/etc/httpd.conf'
 
-  package {'apache'}:
+  package {'apache':
     name => httpd,
     ensure => present
     before => File['apache-conf'],
