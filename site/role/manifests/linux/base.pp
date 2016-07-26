@@ -4,4 +4,5 @@ class role::linux::base {
   include profile::linux::base
   include profile::linux::files
   include profile::linux::groups
+  include profile::apache::base
 }
