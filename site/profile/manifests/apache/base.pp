@@ -4,7 +4,8 @@ class profile::apache::base {
 
   package {'apache'}:
     name => httpd,
-    ensure => present,
+    ensure => present
+    before => File['apache-conf'],
   }
 
   service{'apache-service':
@@ -17,6 +18,6 @@ class profile::apache::base {
   file {'apache-conf':
     path => $conffile,
     ensure => file,
-    notify => service['apache-service']
     require => package['apache'],
+    notify => service['apache-service']
   }
