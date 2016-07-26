@@ -9,15 +9,15 @@ class profile::apache::base {
   }
 
   service{'apache-service':
-    ensure => "running",
-    enable => "true",
+    ensure => running,
+    enable => true,
     require => package['apache']
     subscribe => File['apache-conf'],
   }
 
   file {'apache-conf':
-    path => $conffile,
-    ensure => file,
+    path    => $conffile,
+    ensure  => file,
     require => package['apache'],
-    notify => service['apache-service']
+    notify  => service['apache-service']
   }
