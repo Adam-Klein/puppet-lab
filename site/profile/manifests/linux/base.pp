@@ -5,6 +5,11 @@ class profile::linux::base {
     gid => 'staff',
   }
 
+  user { 'matt':
+    ensure => present,
+    gid => 'staff',
+  }
+
   user { 'alklein':
     ensure  => 'present',
     gid => 'staff',
@@ -17,9 +22,9 @@ class profile::linux::base {
     managehome => 'true'
   }
 
- service { 'sshd':
-   ensure => 'running',
-   enable => 'true',
+  service { 'sshd':
+    ensure => 'running',
+    enable => 'true',
   }
 
   class { 'sudo':
