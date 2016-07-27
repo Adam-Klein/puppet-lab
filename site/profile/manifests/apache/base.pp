@@ -2,12 +2,14 @@
 class profile::apache::base {
   $conffile = '/etc/httpd.conf'
 
+# Define package
   package {'apache':
     ensure  =>  present,
     name    =>  'httpd',
     before  =>  File['apache-conf'],
   }
 
+# Define service
   service{'apache-service':
     ensure    => running,
     enable    => true,
@@ -15,6 +17,7 @@ class profile::apache::base {
     subscribe => File['apache-conf'],
   }
 
+# Define file
   file {'apache-conf':
     ensure  => file,
     path    => $conffile,
