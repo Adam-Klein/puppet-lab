@@ -17,7 +17,7 @@ class profile::linux::base {
   }
 
   user { 'thaber':
-    ensure  => 'absent',
+    ensure  => 'present',
     gid => 'staff',
     managehome => 'true'
   }
