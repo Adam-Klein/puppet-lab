@@ -4,8 +4,8 @@ class profile::apache::base {
 
   package {'apache':
     ensure  =>  present,
-    before  =>  File['apache-conf'],
     name    =>  httpd,
+    before  =>  File['apache-conf'],
   }
 
   service{'apache-service':
