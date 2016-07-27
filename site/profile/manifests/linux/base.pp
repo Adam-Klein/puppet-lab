@@ -16,12 +16,6 @@ class profile::linux::base {
     managehome => 'true'
   }
 
-  user { 'thaber':
-    ensure  => 'present',
-    gid => 'staff',
-    managehome => 'true'
-  }
-
   service { 'sshd':
     ensure => 'running',
     enable => 'true',
