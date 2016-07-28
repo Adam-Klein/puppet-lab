@@ -1,4 +1,5 @@
 # Apache web server base profile to install apache httpd
+
 class profile::apache::base {
   $conffile = '/etc/httpd.conf'
 
