@@ -13,7 +13,7 @@ class profile::apache::base {
   service{'apache-service':
     ensure    => running,
     enable    => true,
-    require   => package['apache']
+    require   => package['apache'],
     subscribe => File['apache-conf'],
   }
 
@@ -24,3 +24,4 @@ class profile::apache::base {
     require => package['apache'],
     notify  => service['apache-service']
   }
+}
