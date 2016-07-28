@@ -10,19 +10,16 @@ class profile::apache::base {
     before  =>  File['apache-conf'],
   }
 
-# Define service
-  service{'apache-service':
-    ensure    => running,
-    enable    => true,
-    require   => package['apache'],
-    subscribe => File['apache-conf'],
-  }
-
 # Define file
   file {'apache-conf':
     ensure  => file,
     path    => $conffile,
-    require => package['apache'],
-    notify  => service['apache-service']
+  }
+
+# Define service
+  service{'httpd':
+    ensure    => running,
+    enable    => true,
+    subscribe => File['apache-conf'],
   }
 }
